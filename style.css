@@ -103,10 +103,153 @@ declarando as fontes, as bordas e a largura e altura
 
 /* MAIN */
 
+/* REALIZAR A CRIAÇÃO DO BANNER DE FUNDO, UTILIZAMOS A IMAGEM NO CSS PARA REALIZAR A ESTILIZAÇÃO DIRETA DA IMAGEM */
 .banner {
     background-image: url(assets/img/eric-masur-AEyam8UN6NY-unsplash\ 1.png);
     height: 580px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;   
     background-size: cover;
     background-position: bottom;
 }
+
+/* Realizar a estilização de todos os componentes dentro do banner-flex */
+.banner-flex {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Realizar a estilização dos componentes dentro da div banner-info */
+.banner-info {
+    width: 200px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Realizando a estilização do titulo all-star */
+.banner-info h1 {
+    font-family: font-titulo-bold;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+/* realizando as estilizações do botão, definindo altura, largura, borda e cursor
+alteração para todos os buttons dentro da minha página, pois não definimos nenhuma classe para o botão
+*/
+button {
+    width: 185px;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #4e53d4;
+}
+
+/* Realizar a estilização da borda gradiente do botão */
+.border-gradient{
+    padding: 2px;
+    border-radius: 8px;
+    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, .6), rgba(255, 255, 255, .1));
+}
+
+/* realizar a estilização da fonte do texto do botão */
+.button-edit {
+    font-family: font-paragrafo-bold;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* VAMOS REALIZAR A CRIAÇÃO DOS CARDS DA MAIN */
+
+.background-ofertas {
+    height: 900px;
+    background-color: #5BDBF5;
+    background-image: linear-gradient(246deg, rgba(91, 219, 245, 0.60) 0%, #5BDBF5 40.00%, #56A6E8 70.00%, #F5B945 100%);
+    background-position: center;
+    background-size: cover;
+}
+
+.tittle-main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+}
+
+.background-ofertas .news-tittle{
+    color: white;
+    font-family: font-titulo-bold;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.background-ofertas .news-paragrafo {
+    color: white;
+    font-family: font-paragrafo-bold;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/* Realizar estilização dos cards */
+.news-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* realizando a estilazação dos cards */
+.card {
+    background-image: linear-gradient(315deg, #9323e8 0%, rgba(124, 208, 225, 0.47) 53.27%, rgba(91, 219, 245, 0.00) 100%); 
+    border-radius: 8px;
+    width: 300px;
+    height: 335px;
+    cursor: pointer;
+    backdrop-filter: blur(1000px);
+    transition: all 0.5s;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+/* estilização do hover (assim que passa o mouse em cima do card */
+.card:hover {
+    box-shadow: 15px 0px 35px;
+}
+
+/* realiza a estilização dos componentes dentro dos cards */
+.info-card {
+    height: 335px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6px;
+}
+
+/* realiza a estilização do h2 dentro dos cards */
+.info-card h2 {
+    font-family: font-titulo-bold;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 26px;
+}
+
+/* realiza a estilização do p dentro dos cards */
+.info-card p {
+    font-family: font-paragrafo-bold;
+    font-weight: bold;
+    color: white;
+    text-align: justify;
+    padding: 10px;
+}
+
